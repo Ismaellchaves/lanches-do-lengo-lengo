@@ -39,7 +39,7 @@ let itemsToShow
 let allItemsValue
 let deliveryValue = 0
 let discountValue = 0
-const promotionCode = 'LENGOLENGO5%'
+const promotionCode = 'lengolengo5%'
 
 // Functions
 const generateCart = () => {
