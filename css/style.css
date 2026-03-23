@@ -795,45 +795,96 @@ a {
 /*# sourceMappingURL=style.css.map */
 
 
-        /* Botão flutuante do WhatsApp */
-        .whatsapp-float {
-           position: fixed;
-           bottom: 35px;
-           right: 35px;
-           width: 70px;
-           height: 70px;
-           z-index: 999;
-           border-radius: 50%;
-           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           background-color: #25d366;
-           animation: pulse 1.5s infinite ease-in-out;
-           transition: transform .2s;
-        }
+ /* 🔥 BOTÃO WHATSAPP */
+.whatsapp-float {
+   position: fixed;
+   bottom: 35px;
+   right: 35px;
 
-        .whatsapp-float img {
-           width: 40px;
-        }
+   width: 70px;
+   height: 70px;
+   z-index: 999;
 
-        /* Efeito ao passar o mouse */
-        .whatsapp-float:hover {
-           transform: scale(1.1);
-        }
+   border-radius: 50%;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-        /* Animação de pulsar */
-        @keyframes pulse {
-           0% {
-              transform: scale(1);
-              box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-           }
-           70% {
-              transform: scale(1.08);
-              box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-           }
-           100% {
-              transform: scale(1);
-              box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-           }
-        }
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: #25d366;
+
+   animation: pulseWhatsapp 1.5s infinite ease-in-out;
+   transition: transform .2s;
+}
+
+.whatsapp-float img {
+   width: 40px;
+}
+
+.whatsapp-float:hover {
+   transform: scale(1.1);
+}
+
+/* 🔥 BOTÃO CARRINHO */
+.cart-float {
+   position: fixed;
+   bottom: 120px; /* MAIS ACIMA */
+   right: 35px;
+
+   width: 70px;
+   height: 70px;
+   z-index: 999;
+
+   border-radius: 50%;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: #363a38;
+
+   animation: pulseCart 1.5s infinite ease-in-out;
+   transition: transform .2s;
+}
+
+.cart-float img {
+   width: 40px;
+}
+
+.cart-float:hover {
+   transform: scale(1.1);
+}
+
+/* 🔥 ANIMAÇÃO WHATSAPP */
+@keyframes pulseWhatsapp {
+   0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+   }
+   70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+   }
+   100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+   }
+}
+
+/* 🔥 ANIMAÇÃO CARRINHO */
+@keyframes pulseCart {
+   0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(247, 7, 7, 0.6);
+   }
+   70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 20px rgba(247, 7, 7, 0);
+   }
+   100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(247, 7, 7, 0);
+   }
+}
