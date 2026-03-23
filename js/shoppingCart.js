@@ -39,7 +39,7 @@ let itemsToShow
 let allItemsValue
 let deliveryValue = 0
 let discountValue = 0
-const promotionCode = 'easteregg'
+const promotionCode = 'LENGOLENGO5%'
 
 // Functions
 const generateCart = () => {
@@ -129,7 +129,7 @@ const chooseDelivery = option => {
 const addDiscount = () => {
     const code = inputPromotionCode.value.trim().toLowerCase()
     if (code === promotionCode) {
-        discountValue = 15
+        discountValue = 5
         appliedCode.showToast()
         init()
     } else codeNotFound.showToast()
