@@ -888,3 +888,28 @@ a {
       box-shadow: 0 0 0 0 rgba(247, 7, 7, 0);
    }
 }
+
+
+/* 🔥 Créditos do site */
+.credits {
+   text-align: center;
+   margin-top: 25px;
+   padding: 12px 0;
+   border-top: 1px solid rgba(255,255,255,0.1);
+   font-size: 14px;
+}
+
+.credits a {
+   color: #000000;
+   text-decoration: none;
+   transition: 0.3s;
+}
+
+.credits a strong {
+   color: #ff0000; /* verde bonito */
+}
+
+.credits a:hover {
+   color: #fc0707;
+   transform: scale(1.05);
+}
