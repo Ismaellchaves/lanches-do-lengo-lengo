@@ -11,7 +11,7 @@ const btnDontWantDelivery = document.querySelector('#dontWantDelivery')
 const btnGenerateOrder = document.querySelector('#generateOrder')
 
 // WhatsApp number
-const WHATSAPP_NUMBER = '5588994907920'
+const WHATSAPP_NUMBER = '5588921893779'
 
 // Helper function to get correct image path
 const getImagePath = (imgPath) => {
