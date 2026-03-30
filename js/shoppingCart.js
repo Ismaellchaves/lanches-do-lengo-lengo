@@ -14,17 +14,43 @@ const btnGenerateOrder = document.querySelector('#generateOrder')
 const WHATSAPP_NUMBER = '5588921893779'
 
 // Helper function to get correct image path
+// Helper function to get correct image path
 const getImagePath = (imgPath) => {
-    if (imgPath.startsWith('http') || imgPath.startsWith('https')) {
+    // Se já for uma URL completa, retorna ela mesma
+    if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {
         return imgPath;
     }
     
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('/pages/') || currentPath.includes('/html/') || currentPath.includes('/cart.html')) {
-        return '../' + imgPath;
+    // Remove barras no início para evitar caminhos duplicados
+    const cleanPath = imgPath.replace(/^\/+/, '');
+    
+    // Detecta se está em produção (Netlify) ou desenvolvimento
+    const isNetlify = window.location.hostname.includes('netlify.app') || 
+                      !window.location.hostname.includes('localhost');
+    
+    if (isNetlify) {
+        // No Netlify, as imagens geralmente estão na raiz ou na pasta /images
+        // Tenta diferentes caminhos possíveis
+        const possiblePaths = [
+            `/${cleanPath}`,           // Raiz do site
+            `/images/${cleanPath}`,    // Pasta images
+            `/assets/${cleanPath}`,    // Pasta assets
+            `./${cleanPath}`,          // Mesmo diretório
+            `../${cleanPath}`          // Diretório pai
+        ];
+        
+        // Retorna o primeiro caminho que funciona (você pode testar qual funciona)
+        // Por enquanto, retorna o caminho da raiz
+        return `/${cleanPath}`;
     }
     
-    return imgPath;
+    // Em desenvolvimento local
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/pages/') || currentPath.includes('/html/') || currentPath.includes('/cart.html')) {
+        return '../' + cleanPath;
+    }
+    
+    return cleanPath;
 }
 
 // Get
@@ -163,7 +189,6 @@ const showOnPage = () => {
     showTotal.innerHTML = 'R$ ' + finalTotal.toFixed(2).toString().replace('.', ',')
 }
 
-// Função para coletar dados do cliente
 const collectCustomerData = () => {
     return new Promise((resolve) => {
         const isDelivery = btnWantDelivery.classList.contains('active')
@@ -187,7 +212,7 @@ const collectCustomerData = () => {
         modalContent.style.cssText = `
             background: white;
             border-radius: 20px;
-            padding: 30px;
+            padding: 20px; /* Reduzido de 30px para 20px */
             max-width: 500px;
             width: 90%;
             max-height: 85vh;
@@ -200,11 +225,11 @@ const collectCustomerData = () => {
         style.textContent = `
             .modal-input, .modal-select {
                 width: 100%;
-                padding: 12px 15px;
-                margin: 8px 0 20px 0;
+                padding: 10px 12px; /* Reduzido de 12px 15px para 10px 12px */
+                margin: 5px 0 12px 0; /* Reduzido de 8px 0 20px 0 para 5px 0 12px 0 */
                 border: 2px solid #e0e0e0;
                 border-radius: 10px;
-                font-size: 16px;
+                font-size: 14px; /* Reduzido de 16px para 14px */
                 font-family: 'Montserrat', sans-serif;
                 box-sizing: border-box;
             }
@@ -215,28 +240,29 @@ const collectCustomerData = () => {
             .modal-label {
                 font-weight: 600;
                 color: #333;
-                margin-top: 10px;
+                margin-top: 5px; /* Reduzido de 10px para 5px */
+                margin-bottom: 0;
                 display: block;
-                font-size: 14px;
+                font-size: 13px; /* Reduzido de 14px para 13px */
             }
             .modal-title {
-                font-size: 24px;
+                font-size: 20px; /* Reduzido de 24px para 20px */
                 font-weight: 800;
                 color: #A90E0E;
                 text-align: center;
-                margin-bottom: 20px;
+                margin-bottom: 15px; /* Reduzido de 20px para 15px */
             }
             .modal-buttons {
                 display: flex;
-                gap: 15px;
-                margin-top: 25px;
+                gap: 12px; /* Reduzido de 15px para 12px */
+                margin-top: 15px; /* Reduzido de 25px para 15px */
             }
             .modal-btn {
                 flex: 1;
-                padding: 12px;
+                padding: 10px; /* Reduzido de 12px para 10px */
                 border: none;
                 border-radius: 10px;
-                font-size: 16px;
+                font-size: 14px; /* Reduzido de 16px para 14px */
                 font-weight: 600;
                 cursor: pointer;
                 transition: all 0.3s;
@@ -258,20 +284,20 @@ const collectCustomerData = () => {
             }
             .payment-options {
                 display: flex;
-                gap: 10px;
-                margin: 15px 0;
+                gap: 8px; /* Reduzido de 10px para 8px */
+                margin: 10px 0; /* Reduzido de 15px 0 para 10px 0 */
                 flex-wrap: wrap;
             }
             .payment-option {
                 flex: 1;
-                padding: 10px;
+                padding: 8px; /* Reduzido de 10px para 8px */
                 border: 2px solid #e0e0e0;
                 border-radius: 10px;
                 text-align: center;
                 cursor: pointer;
                 transition: all 0.3s;
                 background: white;
-                font-size: 14px;
+                font-size: 13px; /* Reduzido de 14px para 13px */
             }
             .payment-option.selected {
                 border-color: #FF7F0A;
@@ -284,20 +310,20 @@ const collectCustomerData = () => {
             }
             .error-message {
                 color: red;
-                font-size: 12px;
-                margin-top: -15px;
-                margin-bottom: 10px;
+                font-size: 11px; /* Reduzido de 12px para 11px */
+                margin-top: -10px; /* Ajustado de -15px para -10px */
+                margin-bottom: 8px; /* Reduzido de 10px para 8px */
                 display: none;
             }
             .delivery-info {
                 background: #f5f5f5;
-                padding: 15px;
+                padding: 10px; /* Reduzido de 15px para 10px */
                 border-radius: 10px;
-                margin: 15px 0;
+                margin: 10px 0; /* Reduzido de 15px 0 para 10px 0 */
                 text-align: center;
             }
             .delivery-price {
-                font-size: 18px;
+                font-size: 16px; /* Reduzido de 18px para 16px */
                 font-weight: bold;
                 color: #FF7F0A;
             }

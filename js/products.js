@@ -11,7 +11,7 @@ const products = [
         id: 1,
         type: 1,
         name: 'PrensaDinho do Herberth',
-        description: 'Carne bem assada, batata palha e pão prensado na chapa.',
+        description: 'Carne bem assada, presunto, batata palha e pão prensado na chapa.',
         price: 4.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -29,7 +29,7 @@ const products = [
         id: 3,
         type: 1,
         name: 'Hambúrguer',
-        description: 'Carne, alface, tomate, milho e cebola.',
+        description: 'Carne, presunto, alface, tomate, milho e cebola.',
         price: 6.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -38,7 +38,7 @@ const products = [
         id: 4,
         type: 1,
         name: 'X-Burguer',
-        description: 'Carne, queijo, alface, tomate, milho e cebola.',
+        description: 'Carne, queijo, presunto, alface, tomate, milho e cebola.',
         price: 7.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -56,7 +56,7 @@ const products = [
         id: 6,
         type: 1,
         name: 'X-Salsicha',
-        description: 'Carne, queijo, salsicha, alface, tomate e milho.',
+        description: 'Carne, queijo,  presunto, salsicha, alface, tomate e milho.',
         price: 8.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -65,7 +65,7 @@ const products = [
         id: 7,
         type: 1,
         name: 'X-Fango',
-        description: 'Frango, queijo, alface, tomate, milho e cebola.',
+        description: 'Frango, queijo, presunto, alface, tomate, milho e cebola.',
         price: 10.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -74,7 +74,7 @@ const products = [
         id: 8,
         type: 1,
         name: 'X-Fango Especial',
-        description: 'Frango, catupiry, queijo, alface, tomate, milho e cebola.',
+        description: 'Frango, catupiry, queijo, presunto, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -83,7 +83,7 @@ const products = [
         id: 9,
         type: 1,
         name: 'Bauru',
-        description: 'Carne, queijo, ovo, alface, tomate, milho e cebola.',
+        description: 'Carne, queijo, presunto, ovo, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -92,7 +92,7 @@ const products = [
         id: 10,
         type: 1,
         name: 'X-Bacon',
-        description: 'Carne, queijo, bacon, alface, tomate, milho e cebola.',
+        description: 'Carne, queijo, presunto, bacon, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -101,7 +101,7 @@ const products = [
         id: 11,
         type: 1,
         name: 'X-Calabresa',
-        description: 'Carne, queijo, calabresa, alface, tomate, milho e cebola.',
+        description: 'Carne, queijo, presunto, calabresa, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
         img: './img/burger.png'
@@ -110,7 +110,7 @@ const products = [
         id: 12,
         type: 1,
         name: 'De Sempre',
-        description: '2 carnes, 2 queijos, ovo, alface, tomate, milho e cebola.',
+        description: '2 carnes, 2 queijos, ovo, presunto, alface, tomate, milho e cebola.',
         price: 15.00,
         lastPrice: 0,
         img: './img/burger.png'
