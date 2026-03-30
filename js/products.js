@@ -14,7 +14,7 @@ const products = [
         description: 'Carne bem assada, presunto, batata palha e pão prensado na chapa.',
         price: 4.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/presadinho.png'
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const products = [
         description: 'Queijo, presunto, alface, tomate, milho e cebola.',
         price: 5.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/misto__hambvurgue.png'
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const products = [
         description: 'Carne, presunto, alface, tomate, milho e cebola.',
         price: 6.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/misto__hambvurgue.png'
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const products = [
         description: 'Carne, queijo, presunto, alface, tomate, milho e cebola.',
         price: 7.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-burguer.png'
     },
     {
         id: 5,
@@ -50,7 +50,7 @@ const products = [
         description: 'Carne, queijo, presunto, alface, tomate e milho.',
         price: 8.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-presunto.png'
     },
     {
         id: 6,
@@ -59,25 +59,25 @@ const products = [
         description: 'Carne, queijo,  presunto, salsicha, alface, tomate e milho.',
         price: 8.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-salsicha.png'
     },
     {
         id: 7,
         type: 1,
-        name: 'X-Fango',
+        name: 'X-Frango',
         description: 'Frango, queijo, presunto, alface, tomate, milho e cebola.',
         price: 10.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-frango.png'
     },
     {
         id: 8,
         type: 1,
-        name: 'X-Fango Especial',
+        name: 'X-Frango Especial',
         description: 'Frango, catupiry, queijo, presunto, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/X-Frango_Especial.png'
     },
     {
         id: 9,
@@ -86,7 +86,7 @@ const products = [
         description: 'Carne, queijo, presunto, ovo, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/bauru.png'
     },
     {
         id: 10,
@@ -95,7 +95,7 @@ const products = [
         description: 'Carne, queijo, presunto, bacon, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-bacon.png'
     },
     {
         id: 11,
@@ -104,7 +104,7 @@ const products = [
         description: 'Carne, queijo, presunto, calabresa, alface, tomate, milho e cebola.',
         price: 12.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/x-calabresa.png'
     },
     {
         id: 12,
@@ -113,7 +113,7 @@ const products = [
         description: '2 carnes, 2 queijos, ovo, presunto, alface, tomate, milho e cebola.',
         price: 15.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/desempre.png'
     },
     {
         id: 13,
@@ -122,7 +122,7 @@ const products = [
         description: 'Carne, queijo, ovo, presunto, salsicha, frango, calabresa, alface, tomate, milho e cebola.',
         price: 17.00,
         lastPrice: 0,
-        img: './img/xtudo.png'
+        img: './img/lanches/x-tudo.png'
     },
     {
         id: 14,
@@ -131,7 +131,7 @@ const products = [
         description: 'Dois pães árabes com 2 carnes, 2 queijos, 2 ovos, frango c/ catupiry, presunto, salsicha, bacon e verduras. Servido no prato.',
         price: 30.00,
         lastPrice: 0,
-        img: './img/burger.png'
+        img: './img/lanches/arriegua.png'
     },
 
     // ========== PORÇÕES (Batatas Fritas - Type 3) ==========
