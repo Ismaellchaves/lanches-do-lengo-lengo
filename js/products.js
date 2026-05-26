@@ -107,13 +107,13 @@ const products = [
         img: './img/lanches/x-calabresa.png'
     },
     {
-        id: 12,
+        id:12,
         type: 1,
-        name: 'Espetáculo de Sempre',
-        description: '2 carnes, 2 queijos, ovo e salada (alface, tomate).',
-        price: 19.00,
+        name: 'Spirru do Palhaço',
+        description: '3 carnes, 3 queijos, ovo, bacon crocante, molho barbecue e salada (alface, tomate).',
+        price: 25.00,
         lastPrice: 0,
-        img: './img/lanches/desempre.png'
+        img: './img/lanches/spirru.png'
     },
     {
         id: 13,
@@ -127,11 +127,11 @@ const products = [
     {
         id: 14,
         type: 1,
-        name: 'Spirru do Palhaço',
-        description: '3 carnes, 3 queijos, ovo, bacon crocante, molho barbecue e salada (alface, tomate).',
-        price: 25.00,
+        name: 'Espetáculo de Sempre',
+        description: '2 carnes, 2 queijos, ovo e salada (alface, tomate).',
+        price: 19.00,
         lastPrice: 0,
-        img: './img/lanches/spirru.png'
+        img: './img/lanches/desempre.png'
     },
     {
         id: 15,
