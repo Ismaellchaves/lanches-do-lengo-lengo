@@ -1,135 +1,144 @@
 // Types:
-// 1 = Snack (Lanches)
+// 1 = Lanches
 // 2 = Combos (não usado)
-// 3 = Portions (Batatas Fritas)
-// 4 = Drinks (Bebidas)
+// 3 = Porções (Batatas Fritas)
+// 4 = Bebidas
 // 5 = Pastéis
 
 const products = [
-    // ========== LANCHES (Snacks - Type 1) ==========
+    // ========== LANCHES (Type 1) ==========
     {
         id: 1,
         type: 1,
         name: 'PrensaDinho do Herberth',
-        description: 'Carne bem assada, presunto, batata palha e pão prensado na chapa.',
-        price: 4.00,
+        description: 'Carne bem assada, batata palha e pão prensado na chapa. Sem ketchup e sem maionese.',
+        price: 5.00,
         lastPrice: 0,
         img: './img/lanches/presadinho.png'
     },
     {
         id: 2,
         type: 1,
-        name: 'Misto',
-        description: 'Queijo, presunto, alface, tomate, milho e cebola.',
-        price: 5.00,
+        name: 'Misto Malabarista',
+        description: 'Queijo, presunto e salada (alface, tomate).',
+        price: 6.00,
         lastPrice: 0,
         img: './img/lanches/misto__hambvurgue.png'
     },
     {
         id: 3,
         type: 1,
-        name: 'Hambúrguer',
-        description: 'Carne, presunto, alface, tomate, milho e cebola.',
-        price: 6.00,
+        name: 'Hambúrguer Domador',
+        description: 'Carne e salada (alface, tomate).',
+        price: 7.00,
         lastPrice: 0,
         img: './img/lanches/misto__hambvurgue.png'
     },
     {
         id: 4,
         type: 1,
-        name: 'X-Burguer',
-        description: 'Carne, queijo, presunto, alface, tomate, milho e cebola.',
-        price: 7.00,
+        name: 'X-Palhaço',
+        description: 'Carne, queijo e salada (alface, tomate).',
+        price: 8.00,
         lastPrice: 0,
         img: './img/lanches/x-burguer.png'
     },
     {
         id: 5,
         type: 1,
-        name: 'X-Presunto',
-        description: 'Carne, queijo, presunto, alface, tomate e milho.',
-        price: 8.00,
+        name: 'Trapézio de Presunto',
+        description: 'Carne, queijo, presunto e salada (alface, tomate).',
+        price: 9.00,
         lastPrice: 0,
         img: './img/lanches/x-presunto.png'
     },
     {
         id: 6,
         type: 1,
-        name: 'X-Salsicha',
-        description: 'Carne, queijo,  presunto, salsicha, alface, tomate e milho.',
-        price: 8.00,
+        name: 'Show da Salsicha',
+        description: 'Carne, queijo, salsicha e salada (alface, tomate).',
+        price: 9.00,
         lastPrice: 0,
         img: './img/lanches/x-salsicha.png'
     },
     {
         id: 7,
         type: 1,
-        name: 'X-Frango',
-        description: 'Frango, queijo, presunto, alface, tomate, milho e cebola.',
-        price: 10.00,
+        name: 'Equilibrista',
+        description: 'Frango, queijo, presunto e salada (alface, tomate).',
+        price: 12.00,
         lastPrice: 0,
         img: './img/lanches/x-frango.png'
     },
     {
         id: 8,
         type: 1,
-        name: 'X-Frango Especial',
-        description: 'Frango, catupiry, queijo, presunto, alface, tomate, milho e cebola.',
-        price: 12.00,
+        name: 'Bailarina Circense',
+        description: 'Frango, catupiry, queijo e salada (alface, tomate).',
+        price: 14.00,
         lastPrice: 0,
         img: './img/lanches/X-Frango_Especial.png'
     },
     {
         id: 9,
         type: 1,
-        name: 'Bauru',
-        description: 'Carne, queijo, presunto, ovo, alface, tomate, milho e cebola.',
-        price: 12.00,
+        name: 'Bauru do Picadeiro',
+        description: 'Carne, queijo, presunto, ovo e salada (alface, tomate).',
+        price: 14.00,
         lastPrice: 0,
         img: './img/lanches/bauru.png'
     },
     {
         id: 10,
         type: 1,
-        name: 'X-Bacon',
-        description: 'Carne, queijo, presunto, bacon, alface, tomate, milho e cebola.',
-        price: 12.00,
+        name: 'Bacon Explosivo',
+        description: 'Carne, queijo, bacon crocante e salada (alface, tomate).',
+        price: 14.00,
         lastPrice: 0,
         img: './img/lanches/x-bacon.png'
     },
     {
         id: 11,
         type: 1,
-        name: 'X-Calabresa',
-        description: 'Carne, queijo, presunto, calabresa, alface, tomate, milho e cebola.',
-        price: 12.00,
+        name: 'Calabreso do Circo',
+        description: 'Carne, queijo, calabresa e salada (alface, tomate).',
+        price: 14.00,
         lastPrice: 0,
         img: './img/lanches/x-calabresa.png'
     },
     {
         id: 12,
         type: 1,
-        name: 'De Sempre',
-        description: '2 carnes, 2 queijos, ovo, presunto, alface, tomate, milho e cebola.',
-        price: 15.00,
+        name: 'Espetáculo de Sempre',
+        description: '2 carnes, 2 queijos, ovo e salada (alface, tomate).',
+        price: 19.00,
         lastPrice: 0,
         img: './img/lanches/desempre.png'
     },
     {
         id: 13,
         type: 1,
-        name: 'X-Tudo',
-        description: 'Carne, queijo, ovo, presunto, salsicha, frango, calabresa, alface, tomate, milho e cebola.',
-        price: 17.00,
+        name: 'CaraMelada (X-TUDO)',
+        description: 'Carne, queijo, bacon, ovo, presunto, salsicha, frango, calabresa e salada (alface, tomate).',
+        price: 20.00,
         lastPrice: 0,
         img: './img/lanches/x-tudo.png'
     },
     {
         id: 14,
         type: 1,
-        name: 'Arri Égua',
-        description: 'Dois pães árabes com 2 carnes, 2 queijos, 2 ovos, frango c/ catupiry, presunto, salsicha, bacon e verduras. Servido no prato.',
-        price: 30.00,
+        name: 'Spirru do Palhaço',
+        description: '3 carnes, 3 queijos, ovo, bacon crocante, molho barbecue e salada (alface, tomate).',
+        price: 25.00,
+        lastPrice: 0,
+        img: './img/lanches/spirru.png'
+    },
+    {
+        id: 15,
+        type: 1,
+        name: 'ARRI ÉGUA DO LENGO',
+        description: 'Dois pães árabes (um embaixo, outro por cima), 2 carnes, 2 queijos, 2 ovos, frango com catupiry, presunto, salsicha, bacon, molho barbecue, cebola caramelizada e salada. Servido no prato.',
+        price: 40.00,
         lastPrice: 0,
         img: './img/lanches/arriegua.png'
     },
@@ -140,7 +149,7 @@ const products = [
         type: 3,
         name: 'Batata Frita Pequena',
         description: 'Batata frita crocante.',
-        price: 12.00,
+        price: 14.00,
         lastPrice: 0,
         img: './img/porcoes/batap.png'
     },
@@ -149,201 +158,205 @@ const products = [
         type: 3,
         name: 'Batata Frita Grande',
         description: 'Batata frita crocante.',
-        price: 16.00,
+        price: 18.00,
         lastPrice: 0,
         img: './img/porcoes/batatag.png'
     },
 
     // ========== PASTÉIS (Type 5) ==========
-     {
-        id: 15,
+    {
+        id: 30,
         type: 5,
         name: 'Pastel de Carne',
         description: 'Carne, milho e orégano.',
-        price: 6.00,
+        price: 8.00,
         lastPrice: 0,
         img: './img/pasteis/pasteis4.png'
     },
     {
-        id: 16,
+        id: 31,
         type: 5,
         name: 'Pastel de Frango',
         description: 'Frango, milho e orégano.',
-        price: 6.00,
+        price: 8.00,
         lastPrice: 0,
         img: './img/pasteis/pasteis5.png'
     },
     {
-        id: 17,
+        id: 32,
         type: 5,
         name: 'Pastel de Queijo',
         description: 'Queijo, milho e orégano.',
-        price: 6.00,
+        price: 8.00,
         lastPrice: 0,
         img: './img/pasteis/pasteis2.png'
     },
     {
-        id: 18,
+        id: 33,
         type: 5,
         name: 'Pastel Sabor Pizza',
         description: 'Presunto, queijo, tomate, milho e orégano.',
-        price: 6.50,
+        price: 9.00,
         lastPrice: 0,
         img: './img/pasteis/pasteis3.png'
     },
     {
-        id: 19,
+        id: 34,
         type: 5,
-        name: 'ÉD++ (30cm)',
+        name: 'É D++ (30cm)',
         description: 'Presunto, queijo, carne, frango, catupiry, calabresa, milho e orégano.',
-        price: 20.00,
+        price: 25.00,
         lastPrice: 0,
         img: './img/pasteis/pasteis.png'
     },
 
-    // ========== BEBIDAS (Drinks - Type 4) ==========
- {
-    id: 22,
-    type: 4,
-    name: 'Suco de Manga',
-    description: 'Suco natural de manga.',
-    price: 6.00,
-    lastPrice: 0,
-    img: './img/bebida/sucomanga.png'
-},
-{
-    id: 23,
-    type: 4,
-    name: 'Suco de Acerola',
-    description: 'Suco natural de acerola.',
-    price: 6.00,
-    lastPrice: 0,
-    img: './img/bebida/acerola.png'
-},
-{
-    id: 24,
-    type: 4,
-    name: 'Suco de Goiaba',
-    description: 'Suco natural de goiaba.',
-    price: 6.00,
-    lastPrice: 0,
-    img: './img/bebida/goibaba.png'
-},
-{
-    id: 25,
-    type: 4,
-    name: 'Suco de Caju',
-    description: 'Suco natural de caju.',
-    price: 6.00,
-    lastPrice: 0,
-    img: './img/bebida/caju.png'
-},
-{
-    id: 26,
-    type: 4,
-    name: 'Água Mineral 500ml',
-    description: 'Água mineral sem gás.',
-    price: 2.00,
-    lastPrice: 0,
-    img: './img/bebida/agua.png'
-},
-{
-    id: 27,
-    type: 4,
-    name: 'Refri Indaiá (mini)',
-    description: 'Refrigerante mini.',
-    price: 2.50,
-    lastPrice: 0,
-    img: './img/bebida/idaia.png'
-},
-{
-    id: 28,
-    type: 4,
-    name: 'Guaraná/Fanta/Pepsi (mini)',
-    description: 'Refrigerante mini (350ml).',
-    price: 3.00,
-    lastPrice: 0,
-    img: './img/bebida/guarana.png'
-},
-{
-    id: 29,
-    type: 4,
-    name: 'Coca-Cola (mini)',
-    description: 'Coca-Cola mini.',
-    price: 3.50,
-    lastPrice: 0,
-    img: './img/bebida/coca1l.png'
-},
-{
-    id: 30,
-    type: 4,
-    name: 'Lata 350ml',
-    description: 'Coca-Cola, Guaraná, Fanta ou Pepsi.',
-    price: 5.00,
-    lastPrice: 0,
-    img: './img/bebida/coca1l.png'
-},
-{
-    id: 31,
-    type: 4,
-    name: 'Refrigerante 600ml',
-    description: 'Coca-Cola, Cajuíche ou Guaraná.',
-    price: 8.00,
-    lastPrice: 0,
-    img: './img/bebida/guarana.png'
-},
-{
-    id: 32,
-    type: 4,
-    name: 'Refrigerante 1 Litro',
-    description: 'Coca-Cola, Cajuíche, Guaraná ou Pepsi.',
-    price: 10.00,
-    lastPrice: 0,
-    img: './img/bebida/pespsi.png'
-},
-{
-    id: 33,
-    type: 4,
-    name: 'Refrigerante 2 Litros',
-    description: 'Coca-Cola, Cajuíche, Pepsi, Guaraná ou Fanta.',
-    price: 15.00,
-    lastPrice: 0,
-    img: './img/bebida/coca1l.png'
-},
-{
-    id: 34,
-    type: 4,
-    name: 'Cerveja Skol 300ml',
-    description: 'Cerveja Skol long neck.',
-    price: 5.00,
-    lastPrice: 0,
-    img: './img/bebida/skol.png'
-},
-{
-    id: 35,
-    type: 4,
-    name: 'Cerveja Bohemia 300ml',
-    description: 'Cerveja Bohemia long neck.',
-    price: 5.00,
-    lastPrice: 0,
-    img: './img/bebida/bohemia.png'
-},
-{
-    id: 36,
-    type: 4,
-    name: 'Cerveja Brahma 300ml',
-    description: 'Cerveja Brahma long neck.',
-    price: 5.00,
-    lastPrice: 0,
-    img: './img/bebida/brahma.png'
-},
-{
-    id: 37,
-    type: 4,
-    name: 'Cerveja Itaipava 300ml',
-    description: 'Cerveja Itaipava long neck.',
-    price: 4.00,
-    lastPrice: 0,
-    img: './img/bebida/itaipava.png'
-}
+    // ========== BEBIDAS (Type 4) ==========
+    // Sucos
+    {
+        id: 40,
+        type: 4,
+        name: 'Suco de Manga',
+        description: 'Suco natural de manga.',
+        price: 8.00,
+        lastPrice: 0,
+        img: './img/bebida/sucomanga.png'
+    },
+    {
+        id: 41,
+        type: 4,
+        name: 'Suco de Acerola',
+        description: 'Suco natural de acerola.',
+        price: 8.00,
+        lastPrice: 0,
+        img: './img/bebida/acerola.png'
+    },
+    {
+        id: 42,
+        type: 4,
+        name: 'Suco de Goiaba',
+        description: 'Suco natural de goiaba.',
+        price: 8.00,
+        lastPrice: 0,
+        img: './img/bebida/goibaba.png'
+    },
+    {
+        id: 43,
+        type: 4,
+        name: 'Suco de Caju',
+        description: 'Suco natural de caju.',
+        price: 8.00,
+        lastPrice: 0,
+        img: './img/bebida/caju.png'
+    },
+    // Água
+    {
+        id: 44,
+        type: 4,
+        name: 'Água Mineral 500ml',
+        description: 'Água mineral sem gás.',
+        price: 2.00,
+        lastPrice: 0,
+        img: './img/bebida/agua.png'
+    },
+    // Refrigerantes
+    {
+        id: 45,
+        type: 4,
+        name: 'Refri Indaiá (mini)',
+        description: 'Refrigerante mini (sabores variados).',
+        price: 3.00,
+        lastPrice: 0,
+        img: './img/bebida/idaia.png'
+    },
+    {
+        id: 46,
+        type: 4,
+        name: 'Refrigerante Mini (350ml)',
+        description: 'Guaraná, Fanta, Pepsi ou similar.',
+        price: 3.50,
+        lastPrice: 0,
+        img: './img/bebida/guarana.png'
+    },
+    {
+        id: 47,
+        type: 4,
+        name: 'Coca-Cola (mini)',
+        description: 'Coca-Cola mini 350ml.',
+        price: 3.50,
+        lastPrice: 0,
+        img: './img/bebida/coca1l.png'
+    },
+    {
+        id: 48,
+        type: 4,
+        name: 'Refrigerante Mini Lata',
+        description: 'Lata 269ml (sabores variados).',
+        price: 4.00,
+        lastPrice: 0,
+        img: './img/bebida/coca1l.png'
+    },
+    {
+        id: 49,
+        type: 4,
+        name: 'Refrigerante Lata 350ml',
+        description: 'Guaraná, Fanta, Pepsi.',
+        price: 5.00,
+        lastPrice: 0,
+        img: './img/bebida/coca1l.png'
+    },
+    {
+        id: 50,
+        type: 4,
+        name: 'Coca-Cola Lata 350ml',
+        description: 'Coca-Cola tradicional.',
+        price: 6.00,
+        lastPrice: 0,
+        img: './img/bebida/coca1l.png'
+    },
+    {
+        id: 51,
+        type: 4,
+        name: 'Refrigerante 600ml',
+        description: 'Coca-Cola, Cajuíche ou Guaraná.',
+        price: 8.00,
+        lastPrice: 0,
+        img: './img/bebida/guarana.png'
+    },
+    {
+        id: 52,
+        type: 4,
+        name: 'Refrigerante 1 Litro',
+        description: 'Coca-Cola, Cajuíche, Guaraná ou Pepsi.',
+        price: 12.00,
+        lastPrice: 0,
+        img: './img/bebida/pespsi.png'
+    },
+    {
+        id: 53,
+        type: 4,
+        name: 'Refrigerante 2 Litros',
+        description: 'Coca-Cola, Cajuíche, Pepsi, Guaraná ou Fanta.',
+        price: 15.00,
+        lastPrice: 0,
+        img: './img/bebida/coca1l.png'
+    },
+    // Cervejas
+    {
+        id: 54,
+        type: 4,
+        name: 'Cerveja Skol 300ml',
+        description: 'Cerveja Skol long neck.',
+        price: 5.00,
+        lastPrice: 0,
+        img: './img/bebida/skol.png'
+    },
+    {
+        id: 55,
+        type: 4,
+        name: 'Cerveja Brahma 300ml',
+        description: 'Cerveja Brahma long neck.',
+        price: 5.00,
+        lastPrice: 0,
+        img: './img/bebida/brahma.png'
+    }
 ];
