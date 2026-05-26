@@ -387,3 +387,32 @@ img {
 }
 /*# sourceMappingURL=cart.css.map */
 
+/* No seu CSS atual, adicione: */
+
+/* Item com ID específico ou classe */
+.product-card:has(img[alt*="Spirru"]),
+.product-card[data-id="12"] {
+    transform: scale(1.1);
+    border: 3px solid gold;
+    background: linear-gradient(135deg, #fff5e6, #ffe6cc);
+    margin: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.product-card[data-id="12"] h3 {
+    font-size: 24px;
+    color: #ff4444;
+}
+
+.product-card[data-id="12"] .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.product-card[data-id="12"] button {
+    background: #ff4444;
+    font-size: 18px;
+    padding: 12px 20px;
+}
