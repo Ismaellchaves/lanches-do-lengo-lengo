@@ -39,6 +39,13 @@ const checkIfHaveItem = items => {
 
 const addItemToArray = prod => {
     let price = prod.price.toFixed(2).toString().replace('.', ',')
+    const deliveryPrice = prod.deliveryAdditional
+        ? (prod.price + prod.deliveryAdditional).toFixed(2).toString().replace('.', ',')
+        : null
+    const priceMarkup = deliveryPrice
+        ? `<p class="price">Retirada: R$ <span>${price}</span></p>
+                <p class="deliveryPrice">Delivery: + taxa R$ ${prod.deliveryAdditional.toFixed(2).replace('.', ',')}</p>`
+        : `<p class="price">R$ <span>${price}</span></p>`
 
     items +=
         `<div class="card">
@@ -50,7 +57,7 @@ const addItemToArray = prod => {
                 <p>${prod.description}</p>
             </div>
             <div>
-                <p class="price">R$ <span>${price}</span></p>
+                ${priceMarkup}
                 <button class="btn" onclick="addToCart(${prod.id})">
                     <span class="iconify-inline" data-icon="mdi:cart-plus"></span> Adicionar
                 </button>

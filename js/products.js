@@ -218,6 +218,7 @@ const products = [
         name: 'Suco de Manga',
         description: 'Suco natural de manga.',
         price: 8.00,
+        deliveryAdditional: 2.00,
         lastPrice: 0,
         img: './img/bebida/sucomanga.png'
     },
@@ -227,6 +228,7 @@ const products = [
         name: 'Suco de Acerola',
         description: 'Suco natural de acerola.',
         price: 8.00,
+        deliveryAdditional: 2.00,
         lastPrice: 0,
         img: './img/bebida/acerola.png'
     },
@@ -236,6 +238,7 @@ const products = [
         name: 'Suco de Goiaba',
         description: 'Suco natural de goiaba.',
         price: 8.00,
+        deliveryAdditional: 2.00,
         lastPrice: 0,
         img: './img/bebida/goibaba.png'
     },
@@ -245,6 +248,7 @@ const products = [
         name: 'Suco de Caju',
         description: 'Suco natural de caju.',
         price: 8.00,
+        deliveryAdditional: 2.00,
         lastPrice: 0,
         img: './img/bebida/caju.png'
     },

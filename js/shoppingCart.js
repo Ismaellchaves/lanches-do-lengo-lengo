@@ -67,6 +67,12 @@ let deliveryValue = 0
 let discountValue = 0
 const promotionCode = 'lengolengo5%'
 
+const isDeliverySelected = () => btnWantDelivery.classList.contains('active')
+
+const getItemPrice = prod => isDeliverySelected()
+    ? prod.price + (prod.deliveryAdditional || 0)
+    : prod.price
+
 // Functions
 const generateCart = () => {
     const cartItems = getCart()
@@ -77,7 +83,7 @@ const generateCart = () => {
         const item = products.find(element => element.id === prod.id)
         if (item) {
             item.qtd = prod.qtd
-            allItemsValue += item.price * item.qtd
+            allItemsValue += getItemPrice(item) * item.qtd
             cart.push(item)
         }
     })
@@ -85,7 +91,8 @@ const generateCart = () => {
 }
 
 const addItemToItemsToShow = prod => {
-    const price = (prod.price * prod.qtd).toFixed(2).toString().replace('.', ',')
+    const itemPrice = getItemPrice(prod)
+    const price = (itemPrice * prod.qtd).toFixed(2).toString().replace('.', ',')
     const imagePath = getImagePath(prod.img);
     
     itemsToShow += `
@@ -100,7 +107,7 @@ const addItemToItemsToShow = prod => {
                     <input type="text" value="${prod.qtd}" disabled>
                     <button onclick="addItem(${prod.id})">+</button>
                 </div>
-                <p class="price">R$ <span>${price}</span></p>
+                <p class="price">R$ <span>${price}</span>${prod.deliveryAdditional && isDeliverySelected() ? ` <small>(R$ ${prod.price.toFixed(2).replace('.', ',')} + taxa delivery de R$ ${prod.deliveryAdditional.toFixed(2).replace('.', ',')})</small>` : ''}</p>
             </div>
         </div>
     </div>
@@ -522,9 +529,14 @@ const generateOrder = async () => {
     message += '─'.repeat(30) + '\n\n'
 
     generatedCart.forEach(item => {
-        const subtotal = item.price * item.qtd
-        message += `*${item.qtd}x* ${item.name}\n`
-        message += `  R$ ${subtotal.toFixed(2)} (R$ ${item.price.toFixed(2)} cada)\n\n`
+        const itemPrice = getItemPrice(item)
+        const subtotal = itemPrice * item.qtd
+        if (item.deliveryAdditional && isDeliverySelected()) {
+            message += `*${item.qtd}x* ${item.name} R$ ${(item.price * item.qtd).toFixed(2)} + taxa delivery: R$ ${(item.deliveryAdditional * item.qtd).toFixed(2)}\n\n`
+        } else {
+            message += `*${item.qtd}x* ${item.name}\n`
+            message += `  R$ ${subtotal.toFixed(2)} (R$ ${itemPrice.toFixed(2)} cada)\n\n`
+        }
     })
 
     message += '─'.repeat(30) + '\n\n'
