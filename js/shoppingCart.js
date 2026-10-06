@@ -400,8 +400,8 @@ const collectCustomerData = () => {
             neighborhoodSelect.addEventListener('change', () => {
                 const value = neighborhoodSelect.value
                 if (value === 'dom_fragoso') {
-                    currentDeliveryPrice = 2
-                    deliveryPriceValue.textContent = 'R$ 2,00'
+                    currentDeliveryPrice = 3
+                    deliveryPriceValue.textContent = 'R$ 3,00'
                     deliveryPriceInfo.style.display = 'block'
                 } else if (value === 'other') {
                     currentDeliveryPrice = 5
